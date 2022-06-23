@@ -26,7 +26,10 @@ function getSumToN(n){
 // if num is divisible by 3 and 5, output "fizzbuzz"
 // else, output the original number as a string
 function getFizzBuzzNumber(num){
-  return ""
+  if(num % 3 === 0 && num % 5 === 0) return "fizzbuzz"
+  if(num % 3 === 0) return "fizz"
+  if(num % 5 === 0) return "buzz"
+  return num+""
 }
 // Example
 // getFizzBuzzNumber(1) => "1"
@@ -42,8 +45,11 @@ function getFizzBuzzNumber(num){
 // numbers divisible by 5 is replaced with "buzz"
 // and numbers divisible by 3 and 5 is replaced by "fizzbuzz" 
 function getFizzBuzzList(num){
-  return []
+  const array = new Array(num).fill(null);
+  const newArray = array.map((e,index) => index + 1)
+  return newArray.map(getFizzBuzzNumber)
 }
+console.log(getFizzBuzzList(10))
 // Example:
 // getFizzBuzzList(4) => [1,2,fizz,4]
 // getFizzBuzzList(10) => [1,2,fizz,4,buzz,fizz,7,8,fizz,buzz]
@@ -89,8 +95,11 @@ function isPalindrome(word){
 // write a function that will return the value of the fibonacci sequence at element num
 // use 0-indexing
 function getFibonacciN(num){
-  return -1
+  if(num === 0) return 0
+  if(num === 1) return 1
+  return getFibonacciN(num-1) + getFibonacciN(num-2)
 }
+console.log(getFibonacciN(8))
 // Example
 // getFibonacci(0) => 0
 // getFibonacci(6) => 8

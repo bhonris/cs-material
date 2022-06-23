@@ -11,7 +11,7 @@ function getSumOfPositiveElement(numArray){
 function getMedianAndMean(numArray){
   return -1
 }
-// getSumOfPositiveElement([12, 46, 32, 64, 8]) => { mean: 38.5, median: 32 }
+// getSumOfPositiveElement([12, 46, 32, 64, 8]) => { mean: 32.4, median: 32 }
 
 // getNameInitials(text: string) => string
 function getNameInitials(text){
