@@ -1,4 +1,4 @@
-function sleep(ms){
+async function sleep(ms){
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
@@ -22,7 +22,7 @@ async function main() {
   console.log("Value of A:", A)
 }
 
-main()
+// main()
 
 async function loadANumber() {
     console.log("start loading")
@@ -32,9 +32,8 @@ async function loadANumber() {
 }
 
 async function resolveY() {
-  // TODO: Write this async function so that it reutrns the value from loadANumber()
+  // TODO: Write this async function so that it returns a value from loadANumber()
 }
 
-console.log("DERP: ", resolveY())
-
+console.log("Value of resolveY: ", resolveY()) // change this so that it logs out a value
 
