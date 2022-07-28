@@ -2,7 +2,17 @@
 // returns true if there are the same number of all the different characters in the string
 // else returns false
 function sameNumChar(aStr){
-  return false
+  const dict = {}
+  for (let index = 0; index < aStr.length; index++) {
+    const el = aStr[index];
+    dict[el] = (dict[el] || 0) + 1
+
+  }
+  const num = dict[aStr[0]]
+  for(let key of Object.keys(dict)){
+    if(dict[key] !== num) return false
+  }
+  return true
 } 
 console.log(sameNumChar("aabbccdd"))
 // Examples
